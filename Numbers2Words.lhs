@@ -22,4 +22,14 @@
 >   | otherwise = units !! h ++ " hundred and " ++ convert2 t
 >   where
 >     (h, t) = (n `div` 100, n `mod` 100)
-
+>
+> convert6 :: Int -> String
+> convert6 n
+>   | m == 0 = convert3 h
+>   | h == 0 = convert3 m ++ " thousand"
+>   | otherwise = convert3 m ++ " thousand" ++ link h ++ convert3 h
+>   where
+>     (m, h) = (n `div` 1000, n `mod` 1000)
+>
+> link :: Int -> String
+> link h = if h < 100 then " and " else " "
