@@ -33,3 +33,6 @@
 >
 > link :: Int -> String
 > link h = if h < 100 then " and " else " "
+>
+> convert :: Int -> String
+> convert = convert6
