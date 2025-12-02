@@ -14,4 +14,12 @@
 >   | otherwise = tens !! (t-2) ++ "-" ++ units !! u
 >   where
 >     (t, u) = (div n 10, mod n 10)
+>
+> convert3 :: Int -> String
+> convert3 n
+>   | h == 0 = convert2 t
+>   | t == 0 = units !! h ++ " hundred"
+>   | otherwise = units !! h ++ " hundred and " ++ convert2 t
+>   where
+>     (h, t) = (n `div` 100, n `mod` 100)
 
