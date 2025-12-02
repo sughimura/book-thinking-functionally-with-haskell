@@ -15,5 +15,5 @@
 > combine2 (t, u)
 >   | t == 0 = units !! u
 >   | t == 1 = teens !! u
->   | 2 <= t && u == 0 = tens !! (t-2)
->   | 2 <= t && u /= 0 = tens !! (t-2) ++ "-" ++ units !! u
+>   | u == 0 = tens !! (t-2)
+>   | otherwise = tens !! (t-2) ++ "-" ++ units !! u
