@@ -6,14 +6,12 @@
 > teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
 > tens = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
 >
-> digits2 :: Int -> (Int, Int)
-> digits2 n = (div n 10, mod n 10)
-> 
 > convert2 :: Int -> String
-> convert2 = combine2 . digits2
->
-> combine2 (t, u)
+> convert2 n
 >   | t == 0 = units !! u
 >   | t == 1 = teens !! u
 >   | u == 0 = tens !! (t-2)
 >   | otherwise = tens !! (t-2) ++ "-" ++ units !! u
+>   where
+>     (t, u) = (div n 10, mod n 10)
+
