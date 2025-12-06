@@ -7,8 +7,16 @@ count n =
     then ""
     else numbs !! (n - 1) ++ " men, " ++ count (n - 1)
 
+line1 n =
+  if n == 1
+    then "One man went to mow\n"
+    else numbers !! (n - 2) ++ " men " ++ count (n - 2)
+
 main = do
   print $ count 0
   print $ count 1
   print $ count 2
   print $ count 8
+  print $ line1 1
+  print $ line1 2
+  print $ line1 9
