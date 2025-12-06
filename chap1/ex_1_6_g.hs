@@ -27,6 +27,11 @@ line4 n = "Went to mow a meadow\n\n"
 
 verse n = line1 n ++ line2 n ++ line3 n ++ line4 n
 
+song n =
+  if n == 0
+    then ""
+    else song (n - 1) ++ "\n" ++ verse n
+
 main = do
   print $ count 0
   print $ count 1
@@ -46,3 +51,9 @@ main = do
   print $ verse 1
   print $ verse 2
   print $ verse 9
+  print "=== song 1 ==="
+  putStrLn $ song 1
+  print "=== song 3 ==="
+  putStrLn $ song 3
+  print "=== song 9 ==="
+  putStrLn $ song 9
