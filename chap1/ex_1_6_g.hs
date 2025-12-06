@@ -14,6 +14,15 @@ line1 n =
 
 line2 n = "Went to mow a meadow\n"
 
+line3 n =
+  if n == 1
+    then "One man add his dog\n"
+    else
+      numbers !! (n - 2)
+        ++ " men "
+        ++ count (n - 2)
+        ++ "One man and his dog\n"
+
 main = do
   print $ count 0
   print $ count 1
@@ -23,3 +32,7 @@ main = do
   print $ line1 2
   print $ line1 9
   print $ line2 1
+  print "=== line3 ==="
+  print $ line3 1
+  print $ line3 2
+  print $ line3 9
