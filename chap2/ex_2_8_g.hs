@@ -11,17 +11,12 @@ showDate (d, m, y) =
     ++ ", "
     ++ show y
 
-suffix d =
-  if d == 1 || d == 21 || d == 31
-    then "st"
-    else
-      if d == 2 || d == 22
-        then "nd"
-        else
-          if d == 3 || d == 23
-            then "rd"
-            else "th"
+suffix d
+  | d == 1 || d == 21 || d == 31 = "st"
+  | d == 2 || d == 22 = "nd"
+  | d == 3 || d == 23 = "rd"
+  | otherwise = "th"
 
 main = do
   print $ showDate (10, 12, 2013)
-  print $ showDate (21, 11, 2020)
+  print $ showDate (21, 11, 2013)
