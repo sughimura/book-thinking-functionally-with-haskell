@@ -23,6 +23,8 @@ line3 n =
         ++ count (n - 2)
         ++ "One man and his dog\n"
 
+line4 n = "Went to mow a meadow\n\n"
+
 main = do
   print $ count 0
   print $ count 1
@@ -36,3 +38,5 @@ main = do
   print $ line3 1
   print $ line3 2
   print $ line3 9
+  print "=== line4 ==="
+  print $ line4 1
