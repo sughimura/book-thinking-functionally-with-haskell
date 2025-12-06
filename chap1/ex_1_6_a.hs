@@ -1,3 +1,6 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+
+{-# HLINT ignore "Evaluate" #-}
 import Data.List (sort)
 
 double :: Integer -> Integer
