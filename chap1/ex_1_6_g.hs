@@ -12,6 +12,8 @@ line1 n =
     then "One man went to mow\n"
     else numbers !! (n - 2) ++ " men " ++ count (n - 2)
 
+line2 n = "Went to mow a meadow\n"
+
 main = do
   print $ count 0
   print $ count 1
@@ -20,3 +22,4 @@ main = do
   print $ line1 1
   print $ line1 2
   print $ line1 9
+  print $ line2 1
