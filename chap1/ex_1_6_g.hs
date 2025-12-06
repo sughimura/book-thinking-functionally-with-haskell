@@ -25,6 +25,8 @@ line3 n =
 
 line4 n = "Went to mow a meadow\n\n"
 
+verse n = line1 n ++ line2 n ++ line3 n ++ line4 n
+
 main = do
   print $ count 0
   print $ count 1
@@ -40,3 +42,7 @@ main = do
   print $ line3 9
   print "=== line4 ==="
   print $ line4 1
+  print "=== verse ==="
+  print $ verse 1
+  print $ verse 2
+  print $ verse 9
